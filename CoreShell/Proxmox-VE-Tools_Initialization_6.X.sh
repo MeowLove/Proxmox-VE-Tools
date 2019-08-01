@@ -51,13 +51,14 @@ echo -e "\033[32m Cancel management panel login subscription reminder...OK \033[
 sleep 1s
 
 echo -e "\033[37m System variable file to enable forwarding and network optimization... \033[0m"
-echo -e 'net.core.default_qdisc=fq
-net.ipv4.tcp_congestion_control=bbr
+echo -e 'net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+net.ipv4.ip_forward = 1
 net.ipv6.conf.vmbr0.autoconf = 0
 net.ipv6.conf.vmbr0.accept_ra = 2
+net.ipv6.conf.default.proxy_ndp = 1
 net.ipv6.conf.default.forwarding = 1
 net.ipv6.conf.all.forwarding = 1
-net.ipv6.conf.default.proxy_ndp = 1
 net.ipv6.conf.all.proxy_ndp = 1' > /etc/sysctl.conf
 sysctl -p
 echo -e "\033[32m System variable file to enable forwarding and network optimization...OK \033[0m"
