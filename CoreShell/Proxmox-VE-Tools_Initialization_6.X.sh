@@ -18,7 +18,7 @@ echo -e "\n\n\n"
 clear
 echo -e "\n"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.5 2019/08/06 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.6 2019/08/06 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
@@ -72,8 +72,8 @@ echo -e "\033[32m PVE panel SSL certificate customization (protection of privacy
 sleep 1s
 
 echo -e "\033[37m Download System Template (ISO)... \033[0m"
-wget --no-check-certificate -qO /var/lib/vz/template/iso/Boot-Legacy(netboot.xyz).iso 'https://raw.githubusercontent.com/MeowLove/Proxmox-VE-Tools/master/CoreFiles/iso/Boot-Legacy(netboot.xyz).iso'
-wget --no-check-certificate -qO /var/lib/vz/template/iso/Boot-EFI(netboot.xyz).iso 'https://raw.githubusercontent.com/MeowLove/Proxmox-VE-Tools/master/CoreFiles/iso/Boot-EFI(netboot.xyz).iso'
+wget --no-check-certificate -qO '/var/lib/vz/template/iso/Boot-Legacy(netboot.xyz).iso' 'https://raw.githubusercontent.com/MeowLove/Proxmox-VE-Tools/master/CoreFiles/iso/Boot-Legacy(netboot.xyz).iso'
+wget --no-check-certificate -qO '/var/lib/vz/template/iso/Boot-EFI(netboot.xyz).iso' 'https://raw.githubusercontent.com/MeowLove/Proxmox-VE-Tools/master/CoreFiles/iso/Boot-EFI(netboot.xyz).iso'
 systemctl restart pveproxy
 echo -e "\033[32m Download System Template (ISO)...OK \033[0m"
 sleep 1s
@@ -108,7 +108,7 @@ echo -e "\n"
 echo -e "\033[32m Please follow the tutorial to configure the Networks NIC settings (vim /etc/network/interfaces) \033[0m"
 echo -e "\033[32m After the setup is complete, please restart the server (reboot) \033[0m"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.5 2019/08/06 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.6 2019/08/06 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
