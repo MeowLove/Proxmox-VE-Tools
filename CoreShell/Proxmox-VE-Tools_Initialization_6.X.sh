@@ -18,7 +18,7 @@ echo -e "\n\n\n"
 clear
 echo -e "\n"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.6 2019/08/06 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.7 2019/08/10 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
@@ -92,7 +92,7 @@ option domain-name "pve-test.tools.cxthhhhh.com";
 option netbios-name-servers 10.0.0.1;
 
 subnet 10.0.0.0 netmask 255.0.0.0 {
-range 10.0.0.10 10.0.0.254;
+range 10.0.0.10 10.0.254.254;
 }' > /etc/dhcp/dhcpd.conf
 echo -e "\033[32m Configure DHCP (10.0.0.0/8, routers 10.0.0.1)...OK \033[0m"
 sleep 1s
@@ -108,7 +108,7 @@ echo -e "\n"
 echo -e "\033[32m Please follow the tutorial to configure the Networks NIC settings (vim /etc/network/interfaces) \033[0m"
 echo -e "\033[32m After the setup is complete, please restart the server (reboot) \033[0m"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.6 2019/08/06 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.7 2019/08/10 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
