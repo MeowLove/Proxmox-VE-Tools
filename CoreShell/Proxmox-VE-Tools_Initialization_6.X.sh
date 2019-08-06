@@ -18,7 +18,7 @@ echo -e "\n\n\n"
 clear
 echo -e "\n"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.7 2019/08/10 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.8 2019/08/10 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
@@ -40,7 +40,7 @@ echo -e "\033[37m Update Proxmox and Debian to the latest and install common sof
 apt remove os-prober -y
 apt update -y && apt dist-upgrade -y
 apt update -y && apt full-upgrade -y
-apt install -y vim curl wget lrzsz odhcp6c nano isc-dhcp-server net-tools sudo p7zip-full
+apt install -y vim curl wget lrzsz odhcp6c nano isc-dhcp-server net-tools sudo p7zip-full 6tunnel
 echo -e "\033[32m Update Proxmox and Debian to the latest and install common software...OK \033[0m"
 sleep 1s
 
@@ -108,7 +108,7 @@ echo -e "\n"
 echo -e "\033[32m Please follow the tutorial to configure the Networks NIC settings (vim /etc/network/interfaces) \033[0m"
 echo -e "\033[32m After the setup is complete, please restart the server (reboot) \033[0m"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.7 2019/08/10 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.8 2019/08/10 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
