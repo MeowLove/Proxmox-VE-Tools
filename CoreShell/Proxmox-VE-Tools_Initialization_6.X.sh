@@ -18,7 +18,7 @@ echo -e "\n\n\n"
 clear
 echo -e "\n"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.9 2019/08/15 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.10 2019/08/15 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
@@ -87,7 +87,7 @@ max-lease-time 7200;
 option subnet-mask 255.0.0.0;
 option broadcast-address 10.255.255.255;
 option routers 10.0.0.1;
-option domain-name-servers 1.1.1.1, 8.8.8.8;
+option domain-name-servers 1.1.1.1, 8.8.8.8 2606:4700:4700::1111;
 option domain-name "pve-test.tools.cxthhhhh.com";
 option netbios-name-servers 10.0.0.1;
 
@@ -132,7 +132,7 @@ echo -e "\n"
 echo -e "\033[32m Please follow the tutorial to configure the Networks NIC settings (vim /etc/network/interfaces) \033[0m"
 echo -e "\033[32m After the setup is complete, please restart the server (reboot) \033[0m"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.9 2019/08/15 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.10 2019/08/15 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
