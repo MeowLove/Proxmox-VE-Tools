@@ -87,7 +87,7 @@ max-lease-time 7200;
 option subnet-mask 255.0.0.0;
 option broadcast-address 10.255.255.255;
 option routers 10.0.0.1;
-option domain-name-servers 1.1.1.1, 8.8.8.8 2606:4700:4700::1111;
+option domain-name-servers 1.1.1.1, 8.8.8.8;
 option domain-name "pve-test.tools.cxthhhhh.com";
 option netbios-name-servers 10.0.0.1;
 
