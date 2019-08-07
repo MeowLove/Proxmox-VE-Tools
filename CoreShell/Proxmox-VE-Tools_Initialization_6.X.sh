@@ -18,7 +18,7 @@ echo -e "\n\n\n"
 clear
 echo -e "\n"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.8 2019/08/10 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.9 2019/08/15 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
@@ -97,6 +97,30 @@ range 10.0.0.10 10.0.254.254;
 echo -e "\033[32m Configure DHCP (10.0.0.0/8, routers 10.0.0.1)...OK \033[0m"
 sleep 1s
 
+echo -e "\033[37m Add New Startup Item (vim /etc/rc.local)... \033[0m"
+echo -e '[Unit]
+ Description=/etc/rc.local Compatibility
+ ConditionPathExists=/etc/rc.local
+
+[Service]
+ Type=forking
+ ExecStart=/etc/rc.local start
+ TimeoutSec=0
+ StandardOutput=tty
+ RemainAfterExit=yes
+ SysVStartPriority=99
+
+[Install]
+ WantedBy=multi-user.target' > /etc/systemd/system/rc-local.service
+echo -e '#!/bin/bash
+exit 0' > /etc/rc.local
+sudo chmod +x /etc/rc.local
+sudo systemctl enable rc-local
+sudo systemctl start rc-local.service
+sudo systemctl status rc-local.service
+echo -e "\033[32m Add New Startup Item (vim /etc/rc.local)...OK \033[0m"
+sleep 1s
+
 echo -e "\033[37m Update Gurb2 to clean up invalid Debian kernel... \033[0m"
 dpkg --list | egrep -i --color 'linux-image|linux-headers'
 apt remove linux-image-amd64 'linux-image-4.19*' -y
@@ -108,7 +132,7 @@ echo -e "\n"
 echo -e "\033[32m Please follow the tutorial to configure the Networks NIC settings (vim /etc/network/interfaces) \033[0m"
 echo -e "\033[32m After the setup is complete, please restart the server (reboot) \033[0m"
 echo "---------------------------------------------------------------------------------------------------------------------"
-echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.8 2019/08/10 \033[0m"
+echo -e "\033[33m Initializes 6.X - Proxmox VE Tools V1.0.9 2019/08/15 \033[0m"
 echo -e "\033[33m An instruction set that initializes the Proxmox Virtual Environment \033[0m"
 echo -e "\n"
 echo -e "\033[33m You need to read the following tutorial in detail: \033[0m"
